@@ -7,7 +7,7 @@
 module.exports = {
 
     userType: {
-        customer: "CUSToMER",
+        customer: "CUSTOMER",
         admin: "ADMIN",
         engineer: "ENGINEER"
     },

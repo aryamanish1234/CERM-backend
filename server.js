@@ -3,8 +3,8 @@ const serverConfig = require("./configs/server");
 const mongoose = require("mongoose");
 const dbConfig = require("./configs/db");
 const bodyParser = require("body-parser");
-const authrouter = require("./routes/auth.routee")
-const EmailOTP = require("./controllers/test");
+const authrouter = require("./routes/auth.routee");
+const userRouter = require('./routes/user.routes');
 const app = express();
 
 
@@ -23,10 +23,9 @@ mongoose.connect(dbConfig.db_url, () => {
 
 
 
+app.use('/', authrouter);
+app.use('/', userRouter);
 
-app.post("/email", EmailOTP.regtration);
-app.post("/login", EmailOTP.sign);
-//app.use('/', authrouter);
 
 
 app.listen(serverConfig.PORT, () => {
