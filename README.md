@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # CRM App backend
 
 
