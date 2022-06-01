@@ -17,6 +17,16 @@ module.exports = {
         approved: "APPROVED",
         rejected: "REJECTED"
 
+    },
+    ticketStatuas: {
+        open: "OPEN",
+        close: "CLOSED",
+        block: "BLOCK"
+    },
+    ticketPrority: {
+        one: 1,
+        two: 2,
+        three: 3,
+        four: 4
     }
-
 };

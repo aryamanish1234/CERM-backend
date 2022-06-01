@@ -5,6 +5,7 @@ const dbConfig = require("./configs/db");
 const bodyParser = require("body-parser");
 const authrouter = require("./routes/auth.routee");
 const userRouter = require('./routes/user.routes');
+const ticketRouter = require("./routes/ticket.router");
 const app = express();
 
 
@@ -25,6 +26,7 @@ mongoose.connect(dbConfig.db_url, () => {
 
 app.use('/', authrouter);
 app.use('/', userRouter);
+app.use('/', ticketRouter)
 
 
 

@@ -43,7 +43,7 @@ exports.findAllUsers = async(req, res) => {
 
 
     try {
-        console.log("Uses -> ", mongoDBObj);
+        // console.log("Uses -> ", mongoDBObj);
         const UserDetails = await User.find(mongoDBObj);
         console.log(UserDetails)
         res.status(200).send(obectConvertes.userResponse(UserDetails));

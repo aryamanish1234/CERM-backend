@@ -9,10 +9,6 @@ const constant = require('../utils/constansts')
 
 exports.veriftToken = (req, res, next) => {
     const token = req.headers['token'];
-    console.log("Token verigication ")
-    console.log(token);
-    console.log("Token is veify ")
-
     if (!token) {
         return res.status(403).send({
             message: " There will be No Token "

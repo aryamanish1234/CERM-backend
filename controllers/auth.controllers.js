@@ -72,8 +72,8 @@ exports.signin = async(req, res) => {
             message: "Faild ! User id doesn't exist "
         })
     }
-    console.log(user.userStatus);
-    console.log(constant.userStatus.approved);
+    // console.log(user.userStatus);
+    // console.log(constant.userStatus.approved);
     // Check user is Approved 
     if (user.userStatus === constant.approved) {
         return res.status(200).send({
